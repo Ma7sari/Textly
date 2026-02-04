@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Writing Assistant</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Writing Assistant</h1>
+
+      <label for="instruction">Instruktion till assistenten</label>
+      <textarea id="instruction" rows="4" placeholder="Skriv en tydlig instruktion..."></textarea>
+
+      <label for="tone">Ton</label>
+      <select id="tone">
+        <option value="neutral">Neutral</option>
+        <option value="formal">Formell</option>
+        <option value="short">Kort</option>
+        <option value="friendly">Vänlig</option>
+      </select>
+
+      <label for="speed">Typing speed (ms/tecken)</label>
+      <div class="slider-row">
+        <input type="range" id="speed" min="0" max="120" value="0" />
+        <span id="speedValue">0</span>
+      </div>
+
+      <label class="checkbox-row">
+        <input type="checkbox" id="replaceSelection" />
+        Ersätt markerad text
+      </label>
+
+      <div class="button-row">
+        <button id="insertBtn">Skriv in vid markören</button>
+        <button id="draftBtn" class="secondary">Skapa utkast i sidopanel</button>
+      </div>
+
+      <div id="status" class="status" aria-live="polite"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
