@@ -20,9 +20,6 @@
       "description": "Open the popup"
     },
     "cancel-typing": {
-      "suggested_key": {
-        "default": "Esc"
-      },
       "description": "Cancel ongoing typing"
     }
   }
